@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text} from 'react-native';
 import SearchBar from '../../components/SearchBar';
 
 const SearchScreen = () => {
@@ -19,7 +19,5 @@ const SearchScreen = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default SearchScreen;
