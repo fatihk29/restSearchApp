@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text} from 'react-native';
 import SearchBar from '../../components/SearchBar';
-import yelp from '../api/yelp';
+import yelp from '../../api/yelp';
 
 const SearchScreen = () => {
   const [term, setTerm] = useState('');
@@ -20,11 +20,7 @@ const SearchScreen = () => {
 
   return (
     <View>
-      <SearchBar
-        term={term}
-        onTermChange={newTerm => setTerm(newTerm)}
-        onTermSubmit={() => searchApi}
-      />
+      <SearchBar term={term} onTermChange={setTerm} onTermSubmit={searchApi} />
       <Text>Search Screen</Text>
       <Text>We have found {results.length} results</Text>
     </View>
